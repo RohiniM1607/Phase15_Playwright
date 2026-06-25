@@ -1,4 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","22757","Google Search","chromium","2026-06-25","passed","2026-06-25","","AutomationExercise\TC1_RegisterUser.test.ts","",""
-"","26610","Google Search","firefox","2026-06-25","passed","2026-06-25","","AutomationExercise\TC1_RegisterUser.test.ts","",""
-"","32454","Google Search","webkit","2026-06-25","passed","2026-06-25","","AutomationExercise\TC1_RegisterUser.test.ts","",""

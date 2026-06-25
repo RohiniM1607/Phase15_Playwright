@@ -1,7 +1,0 @@
-Home page - Verified
-Sign-in performed
-Enter Account Information - Verified
-Account Information Entered
-Address Information Entered
-Account Created
-Account Deleted
