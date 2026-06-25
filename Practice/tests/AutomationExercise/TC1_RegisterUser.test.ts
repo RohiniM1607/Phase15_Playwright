@@ -1,7 +1,7 @@
 import{test, expect} from '@playwright/test';
 
 test('Google Search', async({page}) => {
-    await page.goto("http://automationexercise.com");
+    await page.goto("http://automationexercise.com/");
     await expect(page.locator('.carousel-inner').first()).toBeVisible();
     console.log("Home page - Verified");
     await page.getByRole('link', {name: 'Signup / Login'}).click();
