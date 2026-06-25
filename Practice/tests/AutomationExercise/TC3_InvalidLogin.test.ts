@@ -1,7 +1,9 @@
 import { test, expect } from '@playwright/test';
 
 test('Invalid Login', async({page}) =>{
-    await page.goto("https://automationexercise.com/");
+    await page.goto("https://automationexercise.com/", {
+        waitUntil: "domcontentloaded"
+    });
     await expect(page.locator('.carousel-inner').first()).toBeVisible();
     console.log("Home page - Verified");
     await page.getByRole('link', {name: 'Signup / Login'}).click();

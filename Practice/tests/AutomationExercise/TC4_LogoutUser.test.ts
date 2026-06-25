@@ -1,6 +1,6 @@
 import {test, expect } from '@playwright/test';
 
-test('Valid Login', async({page}) =>{
+test('Logout User', async({page}) =>{
     await page.goto("https://automationexercise.com/", {
         waitUntil: "domcontentloaded"
     });
