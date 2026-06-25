@@ -14,14 +14,14 @@
 ```
 Error: expect(locator).toBeVisible() failed
 
-Locator: locator('.carousel-inner').first()
+Locator: getByText('Enter Account Information')
 Expected: visible
 Timeout: 5000ms
 Error: element(s) not found
 
 Call log:
   - Expect "toBeVisible" with timeout 5000ms
-  - waiting for locator('.carousel-inner').first()
+  - waiting for getByText('Enter Account Information')
 
 ```
 
@@ -34,8 +34,7 @@ Call log:
   4  |     await page.goto("https://automationexercise.com/", {
   5  |         waitUntil: "domcontentloaded"
   6  |     });
-> 7  |     await expect(page.locator('.carousel-inner').first()).toBeVisible();
-     |                                                           ^ Error: expect(locator).toBeVisible() failed
+  7  |     await expect(page.locator('.carousel-inner').first()).toBeVisible();
   8  |     console.log("Home page - Verified");
   9  |     await page.getByRole('link', {name: 'Signup / Login'}).click();
   10 |     await expect(page.getByText('New User Signup!')).toBeVisible();
@@ -45,7 +44,8 @@ Call log:
   14 |     await page.getByRole('button', {name: 'Signup'}).click();
   15 |     console.log("Sign-in performed");
   16 | 
-  17 |     await expect(page.getByText('Enter Account Information')).toBeVisible();
+> 17 |     await expect(page.getByText('Enter Account Information')).toBeVisible();
+     |                                                               ^ Error: expect(locator).toBeVisible() failed
   18 |     console.log("Enter Account Information - Verified");
   19 |     await page.locator('#id_gender2').check();
   20 |     await page.locator('#password').fill("Demo@123");
