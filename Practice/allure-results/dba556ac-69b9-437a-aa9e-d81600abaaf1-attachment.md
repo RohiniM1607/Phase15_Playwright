@@ -1,0 +1,48 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: DemoBlaze.test.ts >> Login Test
+- Location: tests\DemoBlaze.test.ts:2:5
+
+# Error details
+
+```
+Error: expect(locator).toHaveText(expected) failed
+
+Locator:  locator('//a[text()="Welcome RohiniM"]')
+Expected: "Welcome admin"
+Received: "Welcome RohiniM"
+Timeout:  5000ms
+
+Call log:
+  - Expect "toHaveText" with timeout 5000ms
+  - waiting for locator('//a[text()="Welcome RohiniM"]')
+    5 × locator resolved to <a href="#" id="nameofuser" class="nav-link">Welcome RohiniM</a>
+      - unexpected value "Welcome RohiniM"
+
+```
+
+```yaml
+- link "Welcome RohiniM":
+  - /url: "#"
+```
+
+# Test source
+
+```ts
+  1 | import {test, expect } from '@playwright/test';
+  2 | test('Login Test', async ({page}) => {
+  3 |     await page.goto(process.env.BASE_URL!);
+  4 |     await page.click('#login2');
+  5 |     await page.fill('#loginusername',process.env.UNAME!);
+  6 |     await page.fill('#loginpassword',process.env.PASSWORD!);
+  7 |     await page.click('//button[@onclick="logIn()"]');
+> 8 |     await expect(page.locator('//a[text()="Welcome RohiniM"]')).toHaveText("Welcome admin");
+    |                                                                 ^ Error: expect(locator).toHaveText(expected) failed
+  9 | });
+```
