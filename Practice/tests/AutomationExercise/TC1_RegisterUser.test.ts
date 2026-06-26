@@ -17,6 +17,7 @@ test('Valid Register', async({page}) => {
     await expect(page.getByText('Enter Account Information')).toBeVisible();
     console.log("Enter Account Information - Verified");
     await page.locator('#id_gender2').check();
+    await expect(page.locator('#id_gender2')).toBeChecked();
     await page.locator('#password').fill("Demo@123");
     await page.locator('#days').selectOption('13');
     await page.locator('#months').selectOption('June');

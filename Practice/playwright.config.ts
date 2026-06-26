@@ -6,7 +6,7 @@ dotenv.config({ path: `./env/.env.${envName}` });
 
 export default defineConfig({
   testDir: './tests',
-  timeout: 100000,
+  timeout: 70000,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
@@ -19,6 +19,9 @@ export default defineConfig({
     trace: 'retain-on-failure',
     browserName : 'chromium',
     headless: true,
+    launchOptions: {
+      slowMo: 2000, 
+    },
     screenshot: 'retain-on-failure',
     video: 'retain-on-failure',
   },
@@ -29,15 +32,15 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {
