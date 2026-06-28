@@ -1,6 +1,20 @@
 import { test, expect } from '@playwright/test';
 
 test('Invalid Login', async({page}) =>{
+    await page.route('**/*', route => {
+        const url = route.request().url();
+
+        if (
+            url.includes('googleads') ||
+            url.includes('doubleclick') ||
+            url.includes('googlesyndication') ||
+            url.includes('adservice')
+        ) {
+            route.abort();
+        } else {
+            route.continue();
+        }
+    });
     await page.goto("https://automationexercise.com/", {
         waitUntil: "domcontentloaded"
     });
