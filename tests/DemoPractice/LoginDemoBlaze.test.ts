@@ -2,7 +2,7 @@ import {chromium, test} from "@playwright/test"
 
 test("Logi Test Demo", async() => {
     const browser = await chromium.launch({
-        headless: false
+        headless: true
     });
     const context = await browser.newContext();
     const page1 = await context.newPage();
