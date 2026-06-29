@@ -20,7 +20,7 @@ test.describe("Upload file Test", () =>{
     test("Upload single file", async({page})=>{
         const fileInput = page.locator('input[type="file"]');
 
-        if ((await fileInput.inputValue()) === '') {
+        if ((await fileInput.inputValue()) == '') {
             await expect(fileInput).toHaveValue('');
             fileInput.click();
             await fileInput.setInputFiles("C:\\Users\\User\\Downloads\\KIOT_SDET_2026_Python_Selenium_Assessment24.pdf");
