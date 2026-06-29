@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:qa": "cross-env ENV=qa playwright test",
-    "test:uat": "cross-env ENV=uat playwright test",
-    "test:prod": "cross-env ENV=prod playwright test"
+    "test": "npx playwright test",
+    "lastfailed": "npx playwright test --last-failed"
   },
   "keywords": [],
   "author": "",
