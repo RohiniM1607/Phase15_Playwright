@@ -1,8 +1,8 @@
 import {test, expect} from '@playwright/test';
 
-test.describe("CheckBox Test", () =>{
+test.describe("Upload file Test", () =>{
     test.beforeAll(async () =>{
-        console.log("***Check Box test Demo***");
+        console.log("***Upload File test Demo***");
     })
     test.beforeEach(async({page})=>{
         await page.goto("https://www.testmuai.com/selenium-playground/");
