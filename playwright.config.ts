@@ -3,14 +3,15 @@ import dotenv from 'dotenv';
 
 const envName = process.env.ENV || 'qa';
 dotenv.config({ path: `./env/.env.${envName}` });
-
 export default defineConfig({
   testDir: './tests',
   timeout: 700000,
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 3 : undefined,
+  retries: process.env.CI ? 2 : 1,
+  //repeatEach: 3,
+  workers: process.env.CI ? 1 : undefined,
+  //testMatch: ["tests/DemoPractice"],
   reporter: [
     ['html', { open: 'never' }],
     ['allure-playwright']
