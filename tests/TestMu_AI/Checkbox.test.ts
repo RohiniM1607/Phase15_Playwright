@@ -1,5 +1,4 @@
 import {test, expect} from '@playwright/test';
-import { promises } from 'node:dns';
 
 test.describe("CheckBox Test", () =>{
     test.beforeAll(async () =>{
