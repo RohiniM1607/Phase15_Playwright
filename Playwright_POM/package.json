@@ -1,0 +1,26 @@
+{
+  "name": "10_playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RohiniM1607/Phase15_Playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/RohiniM1607/Phase15_Playwright/issues"
+  },
+  "homepage": "https://github.com/RohiniM1607/Phase15_Playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.0.1"
+  },
+  "dependencies": {
+    "csv-parse": "^7.0.0"
+  }
+}
