@@ -18,7 +18,8 @@
   "homepage": "https://github.com/RohiniM1607/Phase15_Playwright#readme",
   "devDependencies": {
     "@playwright/test": "^1.61.1",
-    "@types/node": "^26.0.1"
+    "@types/node": "^26.0.1",
+    "allure-playwright": "^3.10.2"
   },
   "dependencies": {
     "csv-parse": "^7.0.0"

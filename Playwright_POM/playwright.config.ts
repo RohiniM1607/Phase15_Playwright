@@ -7,7 +7,10 @@ export default defineConfig({
   timeout: 100000,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: [['html', { open: 'never' }]],
+   reporter: [
+    ['html'],
+    ['allure-playwright']
+  ],
   use: {
     trace: 'on-first-retry',
   },
