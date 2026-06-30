@@ -9,7 +9,7 @@ export interface LoginUser{
 }
 
 export function readLoginData(): LoginUser[]{
-    const filePath = path.resolve(__dirname, '../test-data/loginData.csv');
+    const filePath = path.resolve(__dirname, '../test-data/OrangeHRM/loginData.csv');
     const fileContent = fs.readFileSync(filePath, 'utf-8');
     return parse(fileContent, {
         columns: true,

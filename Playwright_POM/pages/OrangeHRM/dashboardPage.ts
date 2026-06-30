@@ -13,7 +13,7 @@ export class DashboardPage {
         this.dashboardTitle = page.locator('.oxd-topbar-header-title');
         this.timeAtWork = page.getByText('Time at Work');
         this.quickLaunch = page.getByText('Quick Launch');
-        this.profile = page.locator("oxd-userdropdown-name");
+        this.profile = page.locator(".oxd-userdropdown-name");
         this.logoutButton = page.getByText('Logout');
     }
 

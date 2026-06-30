@@ -1,5 +1,5 @@
 import {test, expect } from '../../fixtures/BaseFixture';
-import loginData from '../test-data/LoginData.json';
+import loginData from '../../test-data/OrangeHRM/LoginData.json';
 
 test.describe("Login Test", ()=>{
     test.beforeEach(async ({loginPage})=>{

@@ -1,4 +1,4 @@
-import loginData from '../test-data/LoginData.json';
+import loginData from '../../test-data/OrangeHRM/LoginData.json';
 import {test, expect} from '../../fixtures/BaseFixture';
 
 

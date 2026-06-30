@@ -33,6 +33,7 @@ export class LoginPage{
         await this.username.fill(username);
         await this.password.fill(password);
         await this.loginButton.click();
+
     }
 
     async getErrorMessage(){
