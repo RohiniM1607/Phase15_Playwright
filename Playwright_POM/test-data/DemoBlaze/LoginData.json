@@ -6,5 +6,9 @@
     "invalidUser":{
         "username": "RohiniM",
         "password": "Rohini"
+    },
+    "emptyCredential":{
+        "username": "RohiniM",
+        "password": ""
     }
 }

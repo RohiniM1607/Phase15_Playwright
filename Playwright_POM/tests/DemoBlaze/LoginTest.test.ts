@@ -24,4 +24,15 @@ test.describe('Login Test', ()=>{
         });
         
     });
+    test('Empty Credentials', async({loginPage})=>{
+        await loginPage.clickLogin();
+        await expect(loginPage.username).toBeVisible();
+        await loginPage.enterCredentials(loginData.invalidUser.username,loginData.invalidUser.password);
+        loginPage.page.on("dialog", async (alert) => {
+            expect(alert.message()).toBe("Please fill out Username and Password.");
+            await alert.accept();
+            await loginPage.clickLoginButton();
+        });
+        
+    });
 })
