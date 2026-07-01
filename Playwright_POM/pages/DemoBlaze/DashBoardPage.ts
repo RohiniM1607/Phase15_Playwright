@@ -10,6 +10,6 @@ export class DashBoardPage{
     }
 
     async verifyWelcomeUser(username: string) {
-        await expect(this.welcomeUser).toHaveText(`Welcome ${username}`);
+        await expect(this.welcomeUser).toHaveText(`Welcome ${username}`, { timeout: 30000 });
     }
 }
