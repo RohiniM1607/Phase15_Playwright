@@ -1,0 +1,10 @@
+{
+    "validUser":{
+        "username": "RohiniM",
+        "password": "Rohini_16"
+    },
+    "invalidUser":{
+        "username": "RohiniM",
+        "password": "Rohini"
+    }
+}

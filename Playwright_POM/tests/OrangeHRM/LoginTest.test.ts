@@ -1,11 +1,10 @@
-import {test, expect } from '../../fixtures/BaseFixture';
+import {test, expect } from '../../fixtures/OrangeHRMFixture';
 import loginData from '../../test-data/OrangeHRM/LoginData.json';
 
 test.describe("Login Test", ()=>{
     test.beforeEach(async ({loginPage})=>{
         await loginPage.navigate();
     })
-
 
     test('Valid Login @login', async({loginPage, dashboardPage})=>{
         await loginPage.login(loginData.validUser.username, loginData.validUser.password);

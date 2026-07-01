@@ -1,4 +1,4 @@
-import {test, expect} from '../../fixtures/BaseFixture';
+import {test, expect} from '../../fixtures/OrangeHRMFixture';
 import {readLoginData, LoginUser} from '../../utils/csvReader'
 
 const users: LoginUser[] = readLoginData();

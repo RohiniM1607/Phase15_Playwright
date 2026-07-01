@@ -1,4 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
+const envName = process.env.ENV || 'qa';
+dotenv.config({path: `./env/.env.${envName}`})
 
 export default defineConfig({
   testDir: './tests',
@@ -8,7 +11,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
    reporter: [
-    ['html'],
+    ['html',  { open: 'never' }],
     ['allure-playwright']
   ],
   use: {

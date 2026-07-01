@@ -1,5 +1,5 @@
 import loginData from '../../test-data/OrangeHRM/LoginData.json';
-import {test, expect} from '../../fixtures/BaseFixture';
+import {test, expect} from '../../fixtures/OrangeHRMFixture';
 
 test.describe("Logout Test",()=>{
     test.beforeEach(async({loginPage})=>{
